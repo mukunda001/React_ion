@@ -1,13 +1,15 @@
 // src/App.jsx
-import Navbar from "./components/Navbar"
-import Main from"./components/Main"
+import Header from "./components/Header"
+import Entry from "./components/Entry"
 
 // We export ONE main component that contains all the others
 export default function App() {
   return (
     <>
-      <Navbar/>
-      <Main/>
+      <Header/>
+      <Entry/>
+      <Entry/>
+      <Entry/>
     </>
   )
-}
+} 
