@@ -1,15 +1,37 @@
 // src/App.jsx
-import Header from "./components/Header"
-import Entry from "./components/Entry"
+import Contact from "./components/contact"
 
 // We export ONE main component that contains all the others
 export default function App() {
   return (
-    <>
-      <Header/>
-      <Entry/>
-      <Entry/>
-      <Entry/>
-    </>
+    <div className = "contacts">
+     <Contact
+      img="/mr-whiskerson.png" 
+      name="Mr. Whiskerson"
+      phone="(212) 555-1234"
+      email="mr.whiskaz@catnap.meow" 
+      />
+
+      <Contact
+         img="/fluffykins.png"
+         name="Fluffykins"
+         phone="(212) 555-2345"
+         email="fluff@me.com"
+          />
+
+       <Contact
+       img="/felix.png"
+       name="Felix"
+       phone="(212) 555-4567"
+       email="thecat@hotmail.com"
+        />
+
+        <Contact
+        img="/pumpkin.png"
+        name="Pumpkin"
+        phone="(0800) CAT KING"
+        email="pumpkin@scrimba.com" 
+        />
+    </div>
   )
 } 
