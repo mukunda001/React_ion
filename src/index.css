@@ -31,7 +31,7 @@ article.entry-journal{
     gap: 20px;
 }
 
-article.entry-journal .japan-image-container{
+article.entry-journal .image-container{
     width: 125px;
     height: 168px;
     overflow: hidden;
@@ -40,7 +40,7 @@ article.entry-journal .japan-image-container{
     margin-left: 19px;
 }
 
-.japan-image{
+.location-image{
     width: 100%;
     height: 100%;
     object-fit: cover;
