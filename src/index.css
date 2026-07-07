@@ -2,59 +2,9 @@
 
 body{
     margin:0;
+    background-color: bisque;
 }
 
-header{
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 55px;
-}
-
-.globe-icon{
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
-}
-
-header > h1{
-    font-size: 1.2rem;
-    font-weight: 400px;
-    font-family: Inter;
-
-}
-    
-article.entry-journal{
-    display:flex;
-    gap: 20px;
-}
-
-article.entry-journal .image-container{
-    width: 125px;
-    height: 168px;
-    overflow: hidden;
-    border-radius: 5px;
-    flex-shrink: 0;
-    margin-left: 19px;
-}
-
-.location-image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.marker-icon{
-    color: red;
-    margin-right: 5px;  
-    
-}
-
-article.entry-journal .span{
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #333;
-    margin-left: 5px;
+.setup{
+  font-weight: bold;
 }
