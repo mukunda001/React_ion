@@ -5,7 +5,7 @@ export default function Entry(props){
             <div className= "image-container">
                 <img src= {props.img.src}  className = "location-image" alt={props.img.alt}/>
             </div>
-            <div>
+            <div className = "info-container">
                <FaMapMarkerAlt className="marker-icon" />
                <span>{props.country}</span>
                 <a href = {props.link} target= "_blank" rel= "noreferrer" >
