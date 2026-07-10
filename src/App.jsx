@@ -10,12 +10,8 @@ export default function App() {
    {
     return(
      <Entry
-    img = {entry.img}
-    country = {entry.country}
-    link = {entry.googleMapsLink}
-    text = {entry.text}
-    title = {entry.title}
-    date = {entry.dates}
+    key = {entry.id}
+    {...entry}
     />)
   })
 

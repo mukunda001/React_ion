@@ -1,3 +1,5 @@
+
+
 import { FaMapMarkerAlt } from "react-icons/fa"
 export default function Entry(props){
     return(
@@ -8,12 +10,12 @@ export default function Entry(props){
             <div className = "info-container">
                <FaMapMarkerAlt className="marker-icon" />
                <span>{props.country}</span>
-                <a href = {props.link} target= "_blank" rel= "noreferrer" >
+                <a href = {props.googleMapsLink} target= "_blank" rel= "noreferrer" >
                 View On Google Maps</a>
                 <h2 className = "journal-title"> {props.title} </h2>
-                <p className= "entry-date">{props.date}</p>
-                <p>{props.text}</p>
+                <p className= "entry-date">{props.dates}</p>
+                <p className = "entry-text"> {props.text}</p>
             </div>
         </article>
     )   
-}
+}  
