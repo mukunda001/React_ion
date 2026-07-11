@@ -2,6 +2,15 @@
 
 export default function Main(){
     return (
-    <h1>Some Contents</h1>
+        <main>
+   <form className = "Add-ingredient-Form">
+    <input
+        type = "text" 
+        placeholder = "e.g. pepper"
+        aria-label = "Add ingredient"/>
+
+    <button > Add ingredient </button>
+   </form>
+   </main>
     )
 }
