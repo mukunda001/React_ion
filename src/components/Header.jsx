@@ -1,11 +1,10 @@
-import { FaGlobeAsia } from "react-icons/fa"
+// src/components/Header.jsx
+
 export default function Header(){
-    return(
-        <header >
-        <FaGlobeAsia className = "globe-icon"/>
-        <h1>my Travel Journal</h1>
-    
-        </header> 
-        
+    return (
+        <header>
+            <img src= "/icons/chef-claude-icon.png" alt = "chef_icon"/>
+            <h2> Chef Claude </h2>
+        </header>
     )
-}
+} 

@@ -1,97 +1,105 @@
-
+/* src/index.css  */
 
 body{
-    margin:0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fAfAf8;
 }
 
 header{
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    height: 55px;
+    gap: 12px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
 }
 
-.globe-icon{
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
+header > img{
+    width: 50px;
 }
 
-header > h1{
-    font-size: 1.2rem;
-    font-weight: 400px;
-    font-family: Inter;
+main{
+    padding: 25px 30px 10px;
 }
 
-.entries-list{
-    margin: 45px 40px;
-}
-    
-article.entry-journal{
-    display:flex;
-    gap: 20px;
-    margin-bottom: 20px;
+.Add-ingredient-Form{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 38px;
 }
 
-article.entry-journal .image-container{
-    width: 125px;
-    height: 168px;
-    overflow: hidden;
+.Add-ingredient-Form > input{
     border-radius: 5px;
-    flex-shrink: 0;
-    margin-left: 19px;
+    border: 1px solid #D1D5DB;
+    padding: 9px 13px;
+    box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 400px;
 }
 
-.location-image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.marker-icon{
-    color: red;
-    margin-right: 5px;  
-    
-}
-
-article.entry-journal .span{
-    font-size: 0.9rem;
+.Add-ingredient-Form > button{
+    font-family: Inter, sans-serif;
+    border-radius: 6px;
+    border: none;
+    background-color: #141413;
+    color: #FAFAF8;
+    width: 130px;
+    height: 30px;
+    font-size: 0.875rem;
     font-weight: 500;
-    color: #333;
-    margin-left: 5px;
 }
 
-.info-container p.entry-date{
-   font-weight: bold;
-}
-
-.info-container span {
-    text-transform: uppercase;
-    font-size: 0.9 rem;
-    margin-right: 12px;
-}
-
-.info-container a {
-    color: #2B283A;
-    font-size: 0.9 rem;
+.Add-ingredient-Form > button::before {
+    content: "+";
+    margin-right: 5px;
 }
 
 
-.info-container h2.journal-title {
-    margin-top: 7px;
-    margin-bottom: 17px;
+ul.ingredients-list {
+    margin-bottom: 48px;
 }
 
-.info-container p.entry-dates{
-     margin-top: 7px;
-    margin-bottom: 17px;
+ul.ingredients-list > li {
+    color: #475467;
+    line-height: 28px;
 }
 
-.info-container p.entry-text {
-    line-height: 1.5;
-    font-size: 0.9rem;
-    display: -webkit-box;
-    overflow: hidden;
+.get-recipe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: #F0EFEB;
+    padding: 10px 28px;
+}
+
+.get-recipe-container h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.get-recipe-container p {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 20px;
+}
+
+.get-recipe-container button {
+    border: none;
+    border-radius: 6px;
+    background: #D17557;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: #FAFAF8;
+    padding: 9px 17px;
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    cursor: pointer;
 }
