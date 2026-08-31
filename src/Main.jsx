@@ -3,12 +3,19 @@
 import {useState} from "react"
 import ClaudeRecipe from "./components/ClaudeRecipe"
 import IngredientList from "./components/IngredientList"
+import { getRecipeFromGemini } from "./ai"
 
 export default function Main(){
 
-    const [recipeShown, setRecipeShown] = useState(false)
-    const ingredients = ["Chicken", "Rice"]
-      const [Ingredients, setIngredients] = useState(ingredients)
+      const [ingredients, setIngredients] = useState(["Chicken", "Rice", "Onion", "Garlic"])
+
+        const [recipe, setRecipe] = useState()
+
+
+      async function getRecipe() {
+        const recipeMarkdown = await getRecipeFromGemini(ingredients)
+        setRecipe(recipeMarkdown)
+    }
 
 
     function handleSubmit(data){
@@ -16,13 +23,9 @@ export default function Main(){
         
         if (!newIngredient) return;
 
-    setIngredients([...Ingredients, newIngredient]);
+    setIngredients([...ingredients, newIngredient]);
 
 }
-
-    function getRecipe(){
-        setRecipeShown(prevstate => true)
-    }
 
     return (
    <main>
@@ -37,10 +40,10 @@ export default function Main(){
     <button> Add ingredient </button>
    </form>
    {
-        Ingredients.length > 0 && <IngredientList Ingredients = {Ingredients}
+        ingredients.length > 0 && <IngredientList Ingredients = {ingredients}
                                                   getRecipe = {getRecipe}/>
             }
-            { recipeShown? <ClaudeRecipe/> : null}
+            { recipe && <ClaudeRecipe recipe={recipe} /> }
    </main>
     )}
   
