@@ -1,6 +1,6 @@
 // src/Main.jsx
 
-import {useState} from "react"
+import {useState, useEffect, useRef} from "react"
 import ClaudeRecipe from "./components/ClaudeRecipe"
 import IngredientList from "./components/IngredientList"
 import { getRecipeFromGemini } from "./ai"
@@ -10,7 +10,13 @@ export default function Main(){
       const [ingredients, setIngredients] = useState(["Chicken", "Rice", "Onion", "Garlic"])
 
         const [recipe, setRecipe] = useState()
+        const recipeSection = useRef(null)
 
+        useEffect(() => {
+            if (recipe !== "" && recipeSection.current !== null) 
+            recipeSection.current.scrollIntoView()
+
+        }, [recipe])
 
       async function getRecipe() {
         const recipeMarkdown = await getRecipeFromGemini(ingredients)
@@ -40,7 +46,8 @@ export default function Main(){
     <button> Add ingredient </button>
    </form>
    {
-        ingredients.length > 0 && <IngredientList Ingredients = {ingredients}
+        ingredients.length > 0 && <IngredientList ref = {recipeSection}
+                                                 Ingredients = {ingredients}
                                                   getRecipe = {getRecipe}/>
             }
             { recipe && <ClaudeRecipe recipe={recipe} /> }
